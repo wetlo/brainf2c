@@ -59,7 +59,7 @@ char interpret_reped(char begin) {
             printf("p = (p %c %d) %% %d;\n",
                    begin == '>' ? '+' : '-',
                    reps,
-		   MEM_SIZE
+                   MEM_SIZE
             );
     }
 
@@ -74,11 +74,11 @@ char interpret(char c) {
         PRINT_CMD('[', "while (a[p]) {\n")
         PRINT_CMD(']', "}\n")
 
-		case '+':
-		case '-':
-		case '>':
-		case '<':
-			return interpret_reped(c);
+        case '+':
+        case '-':
+        case '>':
+        case '<':
+            return interpret_reped(c);
         default:
             break;
     }
@@ -94,7 +94,7 @@ int main(int argc, char** argv) {
         next = interpret(next);
     }
 
-	print_footer();
+    print_footer();
 
-	return 0;
+    return 0;
 }
